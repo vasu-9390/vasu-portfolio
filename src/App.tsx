@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FloatingSkills3D } from './components/3d/FloatingSkills3D';
+import { MouseParticleTrail } from './components/common/MouseParticleTrail';
 import { Navbar } from './components/layout/Navbar';
 import { HeroSection } from './components/sections/HeroSection';
 import { AboutSection } from './components/sections/AboutSection';
@@ -39,6 +40,9 @@ export function App() {
 
   return (
     <div className="app-container" style={{ position: 'relative', minHeight: '100vh', background: '#030712', color: '#f8fafc' }}>
+      {/* Interactive Glowing Mouse Particle Trail */}
+      <MouseParticleTrail />
+
       {/* 1. Full-screen Continuous 3D Floating Skills Background */}
       <FloatingSkills3D />
 

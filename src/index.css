@@ -62,7 +62,9 @@
 }
 
 /* Base Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -96,19 +98,27 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-deep);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #1e293b;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--cyan-500);
 }
 
 /* Typography Defaults */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-primary);
   letter-spacing: -0.02em;
@@ -126,7 +136,8 @@ a {
   transition: all 0.2s ease;
 }
 
-code, pre {
+code,
+pre {
   font-family: var(--font-mono);
 }
 
@@ -324,6 +335,7 @@ code, pre {
     transform: scale(0.8);
     opacity: 1;
   }
+
   100% {
     transform: scale(2.4);
     opacity: 0;
@@ -394,36 +406,56 @@ code, pre {
 }
 
 @keyframes spin-ring {
-  0% { transform: rotateX(65deg) rotateZ(0deg); }
-  100% { transform: rotateX(65deg) rotateZ(360deg); }
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg);
+  }
 }
 
 @keyframes spin-ring-rev {
-  0% { transform: rotateX(-50deg) rotateZ(360deg); }
-  100% { transform: rotateX(-50deg) rotateZ(0deg); }
+  0% {
+    transform: rotateX(-50deg) rotateZ(360deg);
+  }
+
+  100% {
+    transform: rotateX(-50deg) rotateZ(0deg);
+  }
 }
 
 @keyframes float-holo {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-14px) scale(1.02); }
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-14px) scale(1.02);
+  }
 }
 
 @keyframes inner-pulse {
-  0% { transform: scale(0.9); opacity: 0.6; }
-  100% { transform: scale(1.15); opacity: 0.95; }
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.15);
+    opacity: 0.95;
+  }
 }
 
 /* Scanline Overlay for Code & Terminal */
 .scanline-effect {
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.25) 50%
-  ), linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.03),
-    rgba(0, 255, 0, 0.01),
-    rgba(0, 0, 255, 0.03)
-  );
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg,
+      rgba(255, 0, 0, 0.03),
+      rgba(0, 255, 0, 0.01),
+      rgba(0, 0, 255, 0.03));
   background-size: 100% 3px, 6px 100%;
 }
 
@@ -431,6 +463,7 @@ code, pre {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -440,6 +473,7 @@ code, pre {
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }
@@ -450,6 +484,7 @@ code, pre {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -459,9 +494,11 @@ code, pre {
 .hover-lift {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .hover-lift:hover {
   transform: translateY(-2px);
 }
+
 .hover-lift:active {
   transform: translateY(0);
 }
